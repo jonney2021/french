@@ -3,6 +3,7 @@
 :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#1d2a39;background:#f3f6fa}*{box-sizing:border-box}body{margin:0}header{background:#12233e;color:#fff;padding:28px max(18px,calc((100vw - 1120px)/2))}h1{font-size:clamp(24px,4vw,36px);margin:0 0 8px}p{line-height:1.65}header p{color:#cbd6e5;margin:0}.wrap{max-width:1120px;margin:auto;padding:20px;display:grid;grid-template-columns:245px minmax(0,1fr);gap:20px}aside,.panel{background:white;border:1px solid #dfe5ee;border-radius:14px;padding:20px;box-shadow:0 3px 14px #1b314207}aside{align-self:start;position:sticky;top:12px}aside button,.daybutton{display:block;width:100%;text-align:left;margin:5px 0;background:#f6f8fc;color:#23374d;border:1px solid #e0e6ef;padding:11px;border-radius:8px;cursor:pointer}aside button.active{background:#ddecff;border-color:#5f9cde;font-weight:700}.panel{margin-bottom:16px}h2{margin:0 0 14px;font-size:21px}h3{font-size:17px;margin:18px 0 8px}.sub{color:#607083;font-size:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:10px}.tile{padding:13px;border:1px solid #e1e7ee;border-radius:9px;background:#fafcfe}.fr{font-weight:650;color:#194b80}.cn{color:#657488;font-size:14px;margin-top:4px}.tag{font-size:12px;display:inline-block;background:#dcecff;color:#255c90;padding:4px 8px;border-radius:99px}a{color:#0b61a8}button.primary{background:#1661a3;color:#fff;border:0;padding:11px 16px;border-radius:8px;cursor:pointer}button.small{padding:6px 10px;border:1px solid #c8d4e0;border-radius:7px;background:white;cursor:pointer}.answer{display:block;padding:10px;border:1px solid #dde5ec;border-radius:8px;margin:7px 0;cursor:pointer}.answer:hover{background:#edf5ff}.feedback{padding:10px;margin-top:10px;background:#eff7ef;border-left:4px solid #239054;border-radius:5px}.resource{padding:14px;border-left:4px solid #2e79b8;background:#f5faff;border-radius:6px;margin:9px 0}.progress{background:#e6edf3;border-radius:20px;height:12px;overflow:hidden;margin:12px 0}.bar{background:#21936b;height:100%;width:0}.divider{border:0;border-top:1px solid #e2e7ed;margin:18px 0}footer{text-align:center;color:#657488;padding:25px}.hidden{display:none}.control{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.control select{padding:10px;border-radius:7px;border:1px solid #bbcbdc;max-width:100%} .warn{background:#fff8e8;border:1px solid #f0deab;padding:13px;border-radius:8px} @media(max-width:720px){.wrap{display:block;padding:12px}aside{position:static;margin-bottom:15px}aside .nav{display:flex;flex-wrap:wrap;gap:5px}aside button{width:auto}header{padding:22px 15px}} </style></head>
 <body><header><h1>📘 90 天魁北克法语学习站</h1><p>Uber 司机法语考试准备 · A1 → 实用阅读听力 ｜ 英语 B2 → 职场沟通</p></header>
 <div class="wrap"><aside><h3>课程导航</h3><div class="nav"><button class="active" data-tab="daily">📅 每日课程</button><button data-tab="listening">🎧 真人魁北克听力</button><button data-tab="vocab">📚 高频词汇</button><button data-tab="english">💬 英语听说</button><button data-tab="progress">✅ 学习记录</button></div><p class="sub">学习进度仅存在本设备浏览器，不上传到 GitHub。</p></aside><main>
+<div class="panel" id="speechSettings"><h2>🔊 法语发音设置</h2><div class="control"><label for="voiceSelect">语音：</label><select id="voiceSelect"><option value="">正在检测语音...</option></select><label for="speedSelect">速度：</label><select id="speedSelect"><option value="0.75">较慢 0.75×</option><option value="0.9" selected>标准学习 0.90×</option><option value="1">正常 1.00×</option></select><button type="button" class="small" id="testVoice">▶ 测试发音</button><button type="button" class="small" id="stopVoice">■ 停止</button></div><p class="sub" id="speechStatus" role="status" aria-live="polite">设备语音加载中...</p><p class="sub">优先使用 fr-CA；如某个声音读错词，可切换其他语音比较。此功能仍是设备合成语音，并非经过人工录制和审音的魁北克真人录音。</p></div>
 <section id="daily"><div class="panel"><div class="control"><label for="day">选择课程：</label><select id="day"></select><button class="small" id="prev">前一天</button><button class="small" id="next">后一天</button></div><h2 id="daytitle" style="margin-top:17px"></h2><div id="dailybody"></div></div></section>
 <section id="listening" class="hidden"><div class="panel"><h2>🎧 每日法语听力训练</h2><div class="warn"><strong>站内对话采用设备语音合成，不是真人录音。</strong> 优先选择加拿大法语（fr-CA）声音；只有其他地区法语声音时会提示。魁北克口音并非总能保证。页面下方保留 Radio-Canada 等真人录音来源，便于纠正和对照发音。</div><div class="control"><label for="listenDay">选择练习：</label><select id="listenDay"></select></div><p id="voiceStatus" class="sub"></p><div id="audioLab"></div><div id="resources"></div><h3>听力训练四步法</h3><ol><li>第一遍不看字幕：抓人物、地点、事情。</li><li>第二遍记录听到的 3–5 个词。</li><li>第三遍核对字幕或转录（如果资源提供）。</li><li>跟着真人说 3 句，再用中文写出理解。</li></ol><p class="sub">注意：听力视频与本站的考试自编练习不一定属于同一场景，日常真人听力是为了熟悉口音。</p></div></section>
 <section id="vocab" class="hidden"><div class="panel"><h2>📚 Uber 相关法语高频词汇</h2><p class="sub">每个词都附中文和例句。例句用于语言学习，不代替法律条文。</p><div id="allvocab" class="grid"></div></div></section>
@@ -95,22 +96,102 @@ const listeningData=[
 {title:"短途行程",fr:["Mon trajet est très court. Pouvez-vous aller plus vite ?","Je comprends, mais je dois respecter les limites de vitesse.","D'accord, merci de conduire prudemment."],zh:["我的行程很短，你能开快点吗？","我理解，但我必须遵守限速。","好的，谢谢你谨慎驾驶。"],question:"Pourquoi le chauffeur ne va-t-il pas plus vite ?",options:["Il doit respecter les limites de vitesse.","Il n'a plus d'essence.","Il attend un ami."],correct:0,why:"limites de vitesse = 限速；dois = 必须。"},
 {title:"结束行程",fr:["Nous sommes arrivés à destination.","Merci beaucoup. Où puis-je descendre ?","Je vais m'arrêter dans un endroit sécuritaire."],zh:["我们已经抵达目的地。","非常感谢，我可以在哪里下车？","我会在安全的地方停车。"],question:"Où le chauffeur va-t-il s'arrêter ?",options:["Dans un endroit sécuritaire.","Au milieu de la route.","Devant un feu rouge."],correct:0,why:"endroit sécuritaire 是魁北克常用表达，意为安全地点。"}
 ];
+
+const speechState={active:null,timer:null,playId:0,voiceKey:""};
+let speechReady=false;
+const SPEECH_VOICE_KEY="qcUberVoicePreference-v2";
+function allFrenchVoices(){
+ if(!("speechSynthesis" in window))return [];
+ return window.speechSynthesis.getVoices().filter(v=>/^fr(?:[-_]|$)/i.test(v.lang));
+}
+function voiceKey(v){return v?encodeURIComponent(v.voiceURI)+"|"+v.lang:"";}
 function getFrenchVoice(){
- if(!("speechSynthesis" in window))return null;
- const vs=window.speechSynthesis.getVoices().filter(v=>v.lang&&v.lang.toLowerCase().startsWith("fr"));
- return vs.find(v=>v.lang.toLowerCase()==="fr-ca")||vs.find(v=>v.lang.toLowerCase().startsWith("fr-ca"))||vs.find(v=>v.lang.toLowerCase()==="fr-fr")||vs[0]||null;
+ const vs=allFrenchVoices();const selected=$("voiceSelect")?.value||speechState.voiceKey;
+ return vs.find(v=>voiceKey(v)===selected)||vs.find(v=>v.lang.replace("_","-").toLowerCase()==="fr-ca")||vs.find(v=>v.lang.toLowerCase().startsWith("fr-ca"))||vs.find(v=>v.lang.replace("_","-").toLowerCase()==="fr-fr")||vs[0]||null;
+}
+function setSpeechStatus(msg){const a=$("speechStatus");if(a)a.textContent=msg;}
+function refreshVoices(){
+ const el=$("voiceSelect");
+ if(!el)return;
+ const voices=allFrenchVoices();
+ let preferred=speechState.voiceKey;
+ if(!preferred){try{preferred=localStorage.getItem(SPEECH_VOICE_KEY)||""}catch{}}
+ el.innerHTML="";
+ if(!voices.length){
+  const opt=document.createElement("option");opt.value="";opt.textContent="尚未找到法语声音";el.appendChild(opt);
+  setSpeechStatus("尚无可用法语语音；请安装法语（加拿大）语音包，再重新打开页面。");
+  showVoiceInfo();return;
+ }
+ voices.sort((a,b)=>Number(b.lang.toLowerCase()==="fr-ca")-Number(a.lang.toLowerCase()==="fr-ca")||a.name.localeCompare(b.name));
+ for(const v of voices){
+  const op=document.createElement("option");op.value=voiceKey(v);op.textContent=v.name+" ("+v.lang+")"+(v.lang.toLowerCase()==="fr-ca"?" · 加拿大法语":"");el.appendChild(op);
+ }
+ const selected=voices.find(v=>voiceKey(v)===preferred)||voices.find(v=>v.lang.toLowerCase()==="fr-ca")||voices[0];
+ speechState.voiceKey=voiceKey(selected);el.value=speechState.voiceKey;
+ speechReady=true;showVoiceInfo();setSpeechStatus("可用： "+selected.name+" ("+selected.lang+")。点击词汇旁边的 🔊 即可试听。");
 }
 function showVoiceInfo(){
- const v=getFrenchVoice(), note=$("voiceStatus"); if(!note)return;
- note.textContent=v?("当前语音："+v.name+"（"+v.lang+"）"+(v.lang.toLowerCase()==="fr-ca"?"；使用加拿大法语，不保证精确魁北克口音。":"；设备没有 fr-CA 声音，这是非加拿大法语回退，请安装 fr-CA 语音以改善发音。")):"未检测到法语语音包。请在设备系统语言/语音设置中安装“法语（加拿大）”声音，并刷新页面。";
+ const v=getFrenchVoice(),note=$("voiceStatus");if(!note)return;
+ note.textContent=v?("当前选用："+v.name+"（"+v.lang+"）。"+(v.lang.toLowerCase()==="fr-ca"?"使用加拿大法语语音，但不保证地道魁北克口音。":"注意：这不是加拿大法语声音；建议安装并选择 fr-CA。")):"未检测到法语语音包。请安装法语（加拿大）语音并刷新网站。";
 }
-function speakFrench(text,rate=0.88){
- if(!("speechSynthesis" in window)){alert("浏览器不支持语音播放。请使用最新版 Chrome、Edge 或 Safari。");return;}
- const voice=getFrenchVoice();if(!voice){showVoiceInfo();alert("暂未发现可用法语声音。请安装法语（加拿大）语音包并重启浏览器。");return;}
- window.speechSynthesis.cancel();
- const u=new SpeechSynthesisUtterance(text);
- u.voice=voice;u.lang=voice.lang;u.rate=rate;u.pitch=1;u.volume=1;
- window.speechSynthesis.speak(u);
+function stopFrench(){
+ speechState.playId+=1;
+ if(speechState.timer!==null){clearTimeout(speechState.timer);speechState.timer=null}
+ speechState.active=null;
+ if("speechSynthesis" in window){
+  window.speechSynthesis.cancel();
+ }
+ setSpeechStatus("播放已停止。");
+}
+function normalizeForSpeech(value){
+ // Keep original spelling visible. Remove only zero-width characters and normalize spacing.
+ return String(value).normalize("NFC").replace(/[\u200B-\u200D\uFEFF]/g,"").replace(/\s+/g," ").trim();
+}
+function playSequence(lines,rate){
+ if(!("speechSynthesis" in window)){setSpeechStatus("这个浏览器不支持语音合成。请使用新版 Chrome、Edge 或 Safari。");return}
+ const voice=getFrenchVoice();
+ if(!voice){refreshVoices();setSpeechStatus("没有法语声音：请安装 fr-CA 语音包。");return}
+ stopFrench();
+ const playId=speechState.playId;
+ const items=lines.map(normalizeForSpeech).filter(Boolean);
+ const actualRate=Number(rate)||Number($("speedSelect")?.value)||0.9;
+ let index=0;
+ function next(){
+  if(playId!==speechState.playId)return;
+  if(index>=items.length){speechState.active=null;setSpeechStatus("✅ 已完整播放。");return}
+  const text=items[index],current=index+1;
+  const u=new SpeechSynthesisUtterance(text);
+  u.lang=voice.lang;u.voice=voice;u.rate=actualRate;u.pitch=1;u.volume=1;
+  speechState.active=u; // Keep reference throughout playback.
+  let settled=false;
+  u.onstart=()=>{if(playId===speechState.playId)setSpeechStatus("正在播放 "+current+"/"+items.length+"："+text)};
+  u.onend=()=>{if(settled||playId!==speechState.playId)return;settled=true;index++;speechState.timer=setTimeout(next,220)};
+  u.onerror=e=>{
+   if(settled||playId!==speechState.playId)return;settled=true;
+   if(e.error==="canceled"||e.error==="interrupted")return;
+   setSpeechStatus("播放失败（"+e.error+"）。请选择其他法语语音后重试。");
+  };
+  // Canceling and immediately starting a new utterance can clip speech on some devices.
+  window.speechSynthesis.resume();
+  window.speechSynthesis.speak(u);
+ }
+ speechState.timer=setTimeout(next,180);
+}
+function speakFrench(text,rate){playSequence([text],rate||Number($("speedSelect")?.value)||0.9)}
+function configureSpeech(){
+ $("voiceSelect").addEventListener("change",e=>{
+  stopFrench();speechState.voiceKey=e.target.value;
+  try{localStorage.setItem(SPEECH_VOICE_KEY,speechState.voiceKey)}catch{}
+  showVoiceInfo();const v=getFrenchVoice();setSpeechStatus(v?"已切换至 "+v.name+"（"+v.lang+"）":"没有可用声音。");
+ });
+ $("testVoice").addEventListener("click",()=>speakFrench("Bonjour ! Je suis votre chauffeur. Est-ce que vous allez à Montréal ?"));
+ $("stopVoice").addEventListener("click",stopFrench);
+ $("speedSelect").addEventListener("change",()=>setSpeechStatus("语速已调整。请重新点击发音。"));
+ refreshVoices();
+ if("speechSynthesis" in window){
+  window.speechSynthesis.addEventListener("voiceschanged",refreshVoices);
+  if(!allFrenchVoices().length){setTimeout(refreshVoices,500);setTimeout(refreshVoices,1600)}
+ }
 }
 function listeningWidget(dayNo,prefix){
  const k=dayNo%listeningData.length,o=listeningData[k],id=prefix+"-listen";
@@ -128,8 +209,8 @@ document.addEventListener("click",e=>{
  if(b.matches(".speak")){speakFrench(b.dataset.say);return;}
  const box=b.closest("[data-listen]");if(!box)return;
  const o=listeningData[Number(box.dataset.index)];
- if(b.matches(".audio-play")){speakFrench(o.fr.join(" "),Number(b.dataset.rate));}
- else if(b.matches(".audio-stop")){if("speechSynthesis" in window)window.speechSynthesis.cancel();}
+ if(b.matches(".audio-play")){playSequence(o.fr,Number(b.dataset.rate));}
+ else if(b.matches(".audio-stop")){stopFrench();}
  else if(b.matches(".audio-show")){box.querySelector(".transcript").classList.toggle("hidden");}
  else if(b.matches(".listening-check")){
   const selected=box.querySelector('input[type="radio"]:checked');
@@ -142,9 +223,9 @@ function renderListeningTab(){
  $("listenDay").addEventListener("change",e=>{$("audioLab").innerHTML=listeningWidget(Number(e.target.value),"library");});
  $("audioLab").innerHTML=listeningWidget(0,"library");
  showVoiceInfo();
- if("speechSynthesis" in window)window.speechSynthesis.onvoiceschanged=showVoiceInfo;
+
 }
 renderListeningTab();
-
+configureSpeech();
 renderDay();renderProgress();
 </script></body></html>
