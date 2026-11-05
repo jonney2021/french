@@ -10,16 +10,17 @@ https://jonney2021.github.io/french/
 
 网站尚未在仓库中自动启用 Pages；只有在 Pages 页面显示部署成功后，才可确认网站已上线。
 
-## 听力政策：不使用 AI 合成声音
+## 发音与听力功能（2026-11-04 更新）
 
-法语听力导航仅使用正版的、真人讲话的外部语料来源：
-
-- Mauril（CBC / Radio-Canada） https://mauril.ca/fr/
-- Radio-Canada OHdio https://ici.radio-canada.ca/ohdio
-- Québec 法语学习资源 https://www.quebec.ca/education/apprendre-le-francais/outils-ressources
-- Québec 本地媒体目录 https://www.quebec.ca/education/apprendre-le-francais/outils-ressources/medias-et-produits-culturels-quebecois-de-langue-francaise
-
-点击后到原站播放，不复制版权录音、不借助浏览器文字转语音，也不生成 AI 法语配音。具体发音地域因原始节目而异，应优先选魁北克制作的节目与说话者。网站当前没有内嵌或逐课精确匹配的独立授权音频文件。
+- 点击法语词汇或句子旁边的 **🔊 发音**，使用设备的浏览器语音合成进行朗读。
+- 浏览器优先选择已安装的 **fr-CA（加拿大法语）** 语音；未提供时回退到其他法语音色并明确提示。**合成声音不等于真人魁北克口音，准确性取决于操作系统/浏览器的语音包。**
+- 站内 **12 组独立编写的 Uber/乘客情景听力对话**，在每日课程与听力专区可播放。提供正常速度、慢速、停止、隐藏或显示法语/中文文本、听后选择题及解析。每天按 12 种场景轮换，并非 90 组独立音频。
+- 站内合成语音播放须有浏览器 `speechSynthesis` 支持，并安装可用的法语语音。建议最新版 Chrome / Edge / Safari。部分设备可能不提供 fr-CA 语音，需在操作系统中安装法语（加拿大）语音或更换设备。
+- 真正的魁北克法语真人录音，仍通过原始版权方网页播放，本站不复制版权录音：
+  - Mauril https://mauril.ca/fr/
+  - Radio-Canada OHdio https://ici.radio-canada.ca/ohdio
+  - Québec 法语学习资源 https://www.quebec.ca/education/apprendre-le-francais/outils-ressources
+- 当前没有专业录音棚制作或经认证的魁北克口音词汇配音；不要将这些合成语音当作官方发音标准。
 
 ## 学习说明
 
