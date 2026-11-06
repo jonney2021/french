@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#12233e"><title>90天魁北克法语 · Uber & English</title><style>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#12233e"><title>90天法语与英语听说学习站</title><style>
 :root{font-family:system-ui,-apple-system,"Segoe UI",sans-serif;color:#1d2a39;background:#f3f6fa}*{box-sizing:border-box}body{margin:0}header{background:#12233e;color:#fff;padding:28px max(18px,calc((100vw - 1120px)/2))}h1{font-size:clamp(24px,4vw,36px);margin:0 0 8px}p{line-height:1.65}header p{color:#cbd6e5;margin:0}.wrap{max-width:1120px;margin:auto;padding:20px;display:grid;grid-template-columns:245px minmax(0,1fr);gap:20px}aside,.panel{background:white;border:1px solid #dfe5ee;border-radius:14px;padding:20px;box-shadow:0 3px 14px #1b314207}aside{align-self:start;position:sticky;top:12px}aside button,.daybutton{display:block;width:100%;text-align:left;margin:5px 0;background:#f6f8fc;color:#23374d;border:1px solid #e0e6ef;padding:11px;border-radius:8px;cursor:pointer}aside button.active{background:#ddecff;border-color:#5f9cde;font-weight:700}.panel{margin-bottom:16px}h2{margin:0 0 14px;font-size:21px}h3{font-size:17px;margin:18px 0 8px}.sub{color:#607083;font-size:14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(205px,1fr));gap:10px}.tile{padding:13px;border:1px solid #e1e7ee;border-radius:9px;background:#fafcfe}.fr{font-weight:650;color:#194b80}.cn{color:#657488;font-size:14px;margin-top:4px}.tag{font-size:12px;display:inline-block;background:#dcecff;color:#255c90;padding:4px 8px;border-radius:99px}a{color:#0b61a8}button.primary{background:#1661a3;color:#fff;border:0;padding:11px 16px;border-radius:8px;cursor:pointer}button.small{padding:6px 10px;border:1px solid #c8d4e0;border-radius:7px;background:white;cursor:pointer}.answer{display:block;padding:10px;border:1px solid #dde5ec;border-radius:8px;margin:7px 0;cursor:pointer}.answer:hover{background:#edf5ff}.feedback{padding:10px;margin-top:10px;background:#eff7ef;border-left:4px solid #239054;border-radius:5px}.resource{padding:14px;border-left:4px solid #2e79b8;background:#f5faff;border-radius:6px;margin:9px 0}.progress{background:#e6edf3;border-radius:20px;height:12px;overflow:hidden;margin:12px 0}.bar{background:#21936b;height:100%;width:0}.divider{border:0;border-top:1px solid #e2e7ed;margin:18px 0}footer{text-align:center;color:#657488;padding:25px}.hidden{display:none}.control{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.control select{padding:10px;border-radius:7px;border:1px solid #bbcbdc;max-width:100%} .warn{background:#fff8e8;border:1px solid #f0deab;padding:13px;border-radius:8px} @media(max-width:720px){.wrap{display:block;padding:12px}aside{position:static;margin-bottom:15px}aside .nav{display:flex;flex-wrap:wrap;gap:5px}aside button{width:auto}header{padding:22px 15px}} </style></head>
-<body><header><h1>📘 90 天魁北克法语学习站</h1><p>Uber 司机法语考试准备 · A1 → 实用阅读听力 ｜ 英语 B2 → 职场沟通</p></header>
-<div class="wrap"><aside><h3>课程导航</h3><div class="nav"><button class="active" data-tab="daily">📅 每日课程</button><button data-tab="listening">🎧 真人魁北克听力</button><button data-tab="vocab">📚 高频词汇</button><button data-tab="english">💬 英语听说</button><button data-tab="progress">✅ 学习记录</button></div><p class="sub">学习进度仅存在本设备浏览器，不上传到 GitHub。</p></aside><main>
-<div class="panel" id="speechSettings"><h2>🔊 法语发音设置</h2><div class="control"><label for="voiceSelect">语音：</label><select id="voiceSelect"><option value="">正在检测语音...</option></select><label for="speedSelect">速度：</label><select id="speedSelect"><option value="0.75">较慢 0.75×</option><option value="0.9" selected>标准学习 0.90×</option><option value="1">正常 1.00×</option></select><button type="button" class="small" id="testVoice">▶ 测试发音</button><button type="button" class="small" id="stopVoice">■ 停止</button></div><div class="control" style="margin-top:12px"><span class="sub">发音测试：</span><button type="button" class="small test-word" data-test-word="permis">permis</button><button type="button" class="small test-word" data-test-word="véhicule">véhicule</button><button type="button" class="small test-word" data-test-word="freins">freins</button><button type="button" class="small test-word" data-test-word="sécurité">sécurité</button><button type="button" class="small test-word" data-test-word="Je vais vérifier le véhicule avant de partir.">完整句子</button></div><p class="sub" id="speechStatus" role="status" aria-live="polite">设备语音加载中...</p><p class="sub">Windows 11 建议先使用 Edge，并尝试带有 <strong>French (Canada) / fr-CA</strong> 及 <strong>Online (Natural)</strong> 标记的声音。网页语音与 Edge 内置“朗读”可能使用不同声线；在线语音通常需要网络。此功能不是人工审音的魁北克真人录音。</p></div>
+<body><header><h1>📘 90 天法语学习站</h1><p>法语 A1 · 词汇、阅读与听力训练 ｜ 英语 B2 · 听说练习</p></header>
+<div class="wrap"><aside><h3>课程导航</h3><div class="nav"><button class="active" data-tab="daily">📅 每日课程</button><button data-tab="listening">🎧 法语听力资源</button><button data-tab="vocab">📚 高频词汇</button><button data-tab="english">💬 英语听说</button><button data-tab="progress">✅ 学习记录</button></div><p class="sub">学习进度仅存在本设备浏览器，不上传到 GitHub。</p></aside><main>
+<div class="panel" id="speechSettings"><h2>🔊 法语发音设置</h2><div class="control"><label for="voiceSelect">语音：</label><select id="voiceSelect"><option value="">正在检测语音...</option></select><label for="speedSelect">速度：</label><select id="speedSelect"><option value="0.75">较慢 0.75×</option><option value="0.9" selected>标准学习 0.90×</option><option value="1">正常 1.00×</option></select><button type="button" class="small" id="testVoice">▶ 测试发音</button><button type="button" class="small" id="stopVoice">■ 停止</button></div><div class="control" style="margin-top:12px"><span class="sub">发音测试：</span><button type="button" class="small test-word" data-test-word="permis">permis</button><button type="button" class="small test-word" data-test-word="véhicule">véhicule</button><button type="button" class="small test-word" data-test-word="freins">freins</button><button type="button" class="small test-word" data-test-word="sécurité">sécurité</button><button type="button" class="small test-word" data-test-word="Je vais vérifier le véhicule avant de partir.">完整句子</button></div><p class="sub" id="speechStatus" role="status" aria-live="polite">设备语音加载中...</p><p class="sub">Windows 11 建议先使用 Edge，并尝试带有 <strong>French (Canada) / fr-CA</strong> 及 <strong>Online (Natural)</strong> 标记的声音。网页语音与 Edge 内置“朗读”可能使用不同声线；在线语音通常需要网络。此功能不是人工审音的真人录音。</p></div>
 <section id="daily"><div class="panel"><div class="control"><label for="day">选择课程：</label><select id="day"></select><button class="small" id="prev">前一天</button><button class="small" id="next">后一天</button></div><h2 id="daytitle" style="margin-top:17px"></h2><div id="dailybody"></div></div></section>
-<section id="listening" class="hidden"><div class="panel"><h2>🎧 每日法语听力训练</h2><div class="warn"><strong>站内对话采用设备语音合成，不是真人录音。</strong> 优先选择加拿大法语（fr-CA）声音；只有其他地区法语声音时会提示。魁北克口音并非总能保证。页面下方保留 Radio-Canada 等真人录音来源，便于纠正和对照发音。</div><div class="control"><label for="listenDay">选择练习：</label><select id="listenDay"></select></div><p id="voiceStatus" class="sub"></p><div id="audioLab"></div><div id="resources"></div><h3>听力训练四步法</h3><ol><li>第一遍不看字幕：抓人物、地点、事情。</li><li>第二遍记录听到的 3–5 个词。</li><li>第三遍核对字幕或转录（如果资源提供）。</li><li>跟着真人说 3 句，再用中文写出理解。</li></ol><p class="sub">注意：听力视频与本站的考试自编练习不一定属于同一场景，日常真人听力是为了熟悉口音。</p></div></section>
-<section id="vocab" class="hidden"><div class="panel"><h2>📚 Uber 相关法语高频词汇</h2><p class="sub">每个词都附中文和例句。例句用于语言学习，不代替法律条文。</p><div id="allvocab" class="grid"></div></div></section>
+<section id="listening" class="hidden"><div class="panel"><h2>🎧 每日法语听力训练</h2><div class="warn"><strong>站内对话采用设备语音合成，不是真人录音。</strong> 优先选择法语（fr-CA）声音；只有其他地区法语声音时会提示。口音并非总能保证。页面下方保留 Radio-Canada 等真人录音来源，便于纠正和对照发音。</div><div class="control"><label for="listenDay">选择练习：</label><select id="listenDay"></select></div><p id="voiceStatus" class="sub"></p><div id="audioLab"></div><div id="resources"></div><h3>听力训练四步法</h3><ol><li>第一遍不看字幕：抓人物、地点、事情。</li><li>第二遍记录听到的 3–5 个词。</li><li>第三遍核对字幕或转录（如果资源提供）。</li><li>跟着真人说 3 句，再用中文写出理解。</li></ol><p class="sub">注意：听力视频与本站的考试自编练习不一定属于同一场景，日常真人听力是为了熟悉口音。</p></div></section>
+<section id="vocab" class="hidden"><div class="panel"><h2>📚 法语高频词汇</h2><p class="sub">每个词都附中文和例句。例句用于语言学习，不代替法律条文。</p><div id="allvocab" class="grid"></div></div></section>
 <section id="english" class="hidden"><div class="panel"><h2>💬 英语 B2 职场听说</h2><p>每天 20 分钟：10 分钟真实英语音频听力 + 10 分钟经理对话模拟。可借助 <a href="https://mauril.ca/en/" target="_blank" rel="noopener">Mauril 英语真实节目</a> 或 <a href="https://learningenglish.voanews.com/" target="_blank" rel="noopener">VOA Learning English</a>。不同英语资源可能有不同口音。</p><div id="englishlist"></div></div></section>
 <section id="progress" class="hidden"><div class="panel"><h2>✅ 学习进度</h2><p id="progressText"></p><div class="progress"><div class="bar" id="bar"></div></div><button class="small" id="reset">清空本机全部进度</button><p class="sub">刷新后通常会保留在同一设备和浏览器。清除浏览器网站数据会丢失记录，本站没有账号同步。</p></div></section>
-</main></div><footer>学习材料与模拟题为独立编写；正式 Uber / SAAQ 资格与培训要求请以官方信息为准。</footer>
+</main></div><footer>本站内容为独立编写的语言学习材料，并非官方考试题库。</footer>
 <script>
 "use strict";
 const categories=[
@@ -19,7 +19,7 @@ const categories=[
 {title:"乘客服务",words:[["service","服务","Le service doit être respectueux."],["plainte","投诉","Le passager fait une plainte."],["écouter","倾听","Il faut écouter le passager."],["résoudre","解决","Essayez de résoudre le problème."],["respect","尊重","Parlez avec respect."],["destination","目的地","Quelle est votre destination ?"],["trajet","行程","Le trajet est court."],["tarif","费用","Le tarif est affiché."],["attendre","等待","Veuillez attendre un moment."],["remercier","感谢","Merci pour votre patience."]],sentence:["Je vais vérifier votre destination.","我会确认您的目的地。"],grammar:"essayer de + 动词原形：尝试做。例：J'essaie de comprendre."},
 {title:"法规与条件",words:[["obligation","义务","Il y a une obligation."],["loi","法律","Il faut respecter la loi."],["règle","规则","Respectez les règles."],["exiger","要求","La loi exige des documents."],["conserver","保留","Conservez les documents."],["présenter","出示","Présentez le permis."],["si","如果","Si le véhicule est dangereux, ne partez pas."],["même si","即使","Même si le trajet est court, respectez les règles."],["sauf si","除非","Sauf si une exception s'applique."],["jusqu'à","直到","Attendez jusqu'à demain."]],sentence:["Même si le trajet est court, il faut respecter les règles.","即使行程短，也必须遵守规则。"],grammar:"si = 如果；même si = 即使；sauf si = 除非。"},
 {title:"情景沟通",words:[["bonjour","你好","Bonjour, vous allez où ?"],["merci","谢谢","Merci beaucoup."],["désolé","抱歉","Je suis désolé pour le retard."],["répéter","重复","Pouvez-vous répéter ?"],["comprendre","理解","Je ne comprends pas."],["adresse","地址","Quelle est l'adresse ?"],["droite","右边","Tournez à droite."],["gauche","左边","Tournez à gauche."],["arrêter","停下","Je vais m'arrêter ici."],["aider","帮助","Puis-je vous aider ?"]],sentence:["Pouvez-vous répéter l'adresse, s'il vous plaît ?","您能再说一遍地址吗？"],grammar:"Pouvez-vous + 动词原形 ? 礼貌询问。例：Pouvez-vous répéter ?"},
-{title:"无障碍与协助",words:[["mobilité","行动能力","La mobilité peut être réduite."],["aide","帮助","Avez-vous besoin d'aide ?"],["accessible","无障碍的","Un accès accessible est important."],["besoin","需要","De quoi avez-vous besoin ?"],["respectueux","尊重的","Soyez respectueux."],["patient","有耐心的","Le chauffeur doit être patient."],["temps","时间","Prenez votre temps."],["demander","询问","Demandez avant d'aider."],["sécuritaire","安全的（魁北克常用）","Choisissez un endroit sécuritaire."],["attention","注意","Faites attention."]],sentence:["Avez-vous besoin d'aide pour monter dans le véhicule ?","您上车需要帮助吗？"],grammar:"avoir besoin de：需要。例：J'ai besoin d'aide."},
+{title:"无障碍与协助",words:[["mobilité","行动能力","La mobilité peut être réduite."],["aide","帮助","Avez-vous besoin d'aide ?"],["accessible","无障碍的","Un accès accessible est important."],["besoin","需要","De quoi avez-vous besoin ?"],["respectueux","尊重的","Soyez respectueux."],["patient","有耐心的","Le chauffeur doit être patient."],["temps","时间","Prenez votre temps."],["demander","询问","Demandez avant d'aider."],["sécuritaire","安全的（常用）","Choisissez un endroit sécuritaire."],["attention","注意","Faites attention."]],sentence:["Avez-vous besoin d'aide pour monter dans le véhicule ?","您上车需要帮助吗？"],grammar:"avoir besoin de：需要。例：J'ai besoin d'aide."},
 {title:"天气与路线",words:[["neige","雪","Il y a de la neige."],["pluie","雨","Il pleut."],["glissant","湿滑的","La route est glissante."],["retard","延误","Je suis en retard."],["trafic","交通状况","Il y a beaucoup de trafic."],["itinéraire","路线","Vérifions l'itinéraire."],["arrivée","抵达","L'arrivée est prévue bientôt."],["départ","出发","Le départ est à huit heures."],["stationnement","停车","Le stationnement est interdit ici."],["ralentir","减速","Il faut ralentir."]],sentence:["La route est glissante, je vais ralentir.","路面湿滑，我会减速。"],grammar:"je vais + 动词原形：将要做某事。"}
 ];
 const english=[
@@ -47,10 +47,10 @@ const pattern=[
 ["天气及路线","La route est glissante aujourd'hui.","今天路面湿滑。"]
 ];
 const resources=[
-{title:"Mauril — CBC/Radio-Canada 真人影音",url:"https://mauril.ca/fr/",desc:"真实的加拿大法语节目片段，部分为魁北克媒体。建议使用 A1/A2 级别，选择魁北克说话者片段。部分材料可能仅在加拿大可用。"},
-{title:"Radio-Canada OHdio — 真人播客与节目",url:"https://ici.radio-canada.ca/ohdio",desc:"魁北克广播主持人和嘉宾真实谈话。可选择短节目，部分节目页面提供文字转录。语速通常比入门课程快。"},
-{title:"魁北克政府 Francisation 自学资源",url:"https://www.quebec.ca/education/apprendre-le-francais/outils-ressources",desc:"官方链接涵盖真实语境的音视频、语音与理解练习，适合基础能力的建立。"},
-{title:"Québec 文化媒体目录",url:"https://www.quebec.ca/education/apprendre-le-francais/outils-ressources/medias-et-produits-culturels-quebecois-de-langue-francaise",desc:"更多魁北克本地真人节目资源；根据自己的水平寻找对话与新闻片段。"},
+{title:"Mauril — 真人法语影音",url:"https://mauril.ca/fr/",desc:"真实节目中的法语音视频片段。建议从 A1/A2 难度开始；部分内容可能有访问地区限制。"},
+{title:"OHdio — 真人法语播客",url:"https://ici.radio-canada.ca/ohdio",desc:"主持人与嘉宾的真实法语谈话；可挑选短节目，有些内容提供文字转录。"},
+{title:"法语自学资源",url:"https://www.quebec.ca/education/apprendre-le-francais/outils-ressources",desc:"官方链接涵盖真实语境的音视频、语音与理解练习，适合基础能力的建立。"},
+{title:"法语文化媒体目录",url:"https://www.quebec.ca/education/apprendre-le-francais/outils-ressources/medias-et-produits-culturels-quebecois-de-langue-francaise",desc:"更多真实法语节目，可根据自己的水平寻找短对话与新闻片段。"},
 {title:"SAAQ — 载客司机资格（法规阅读）",url:"https://saaq.gouv.qc.ca/transport-personnes/transport-remunere-personne-automobile/chauffeur",desc:"官方法规与资格页面。此链接主要用于阅读，并非真人法语听力资料。"}
 ];
 const checkpoints={28:"第 1 月测试：基础理解练习目标 70%。",56:"第 2 月测试：综合练习目标 80%。",84:"第 3 月测试：连续模拟练习目标 85%（自定练习指标，不是官方要求）。"};
@@ -94,7 +94,7 @@ const listeningData=[
 {title:"帮助行动不便乘客",fr:["Bonjour, avez-vous besoin d'aide pour monter ?","Oui, s'il vous plaît. J'ai besoin d'un peu de temps.","Bien sûr, prenez votre temps."],zh:["你好，您上车需要帮助吗？","需要，谢谢。我需要一点时间。","当然，请慢慢来。"],question:"De quoi le passager a-t-il besoin ?",options:["D'un peu de temps.","D'un autre billet.","D'un téléphone."],correct:0,why:"avoir besoin de = 需要；un peu de temps = 一点时间。"},
 {title:"司机证件",fr:["Avez-vous votre permis valide avec vous ?","Oui, je l'ai dans mon portefeuille.","Très bien. Il faut respecter les obligations."],zh:["您带着有效驾照吗？","是的，在我的钱包里。","很好，必须遵守有关义务。"],question:"Où est le permis ?",options:["Dans le véhicule du passager.","Dans le portefeuille.","À la maison."],correct:1,why:"portefeuille = 钱包。"},
 {title:"短途行程",fr:["Mon trajet est très court. Pouvez-vous aller plus vite ?","Je comprends, mais je dois respecter les limites de vitesse.","D'accord, merci de conduire prudemment."],zh:["我的行程很短，你能开快点吗？","我理解，但我必须遵守限速。","好的，谢谢你谨慎驾驶。"],question:"Pourquoi le chauffeur ne va-t-il pas plus vite ?",options:["Il doit respecter les limites de vitesse.","Il n'a plus d'essence.","Il attend un ami."],correct:0,why:"limites de vitesse = 限速；dois = 必须。"},
-{title:"结束行程",fr:["Nous sommes arrivés à destination.","Merci beaucoup. Où puis-je descendre ?","Je vais m'arrêter dans un endroit sécuritaire."],zh:["我们已经抵达目的地。","非常感谢，我可以在哪里下车？","我会在安全的地方停车。"],question:"Où le chauffeur va-t-il s'arrêter ?",options:["Dans un endroit sécuritaire.","Au milieu de la route.","Devant un feu rouge."],correct:0,why:"endroit sécuritaire 是魁北克常用表达，意为安全地点。"}
+{title:"结束行程",fr:["Nous sommes arrivés à destination.","Merci beaucoup. Où puis-je descendre ?","Je vais m'arrêter dans un endroit sécuritaire."],zh:["我们已经抵达目的地。","非常感谢，我可以在哪里下车？","我会在安全的地方停车。"],question:"Où le chauffeur va-t-il s'arrêter ?",options:["Dans un endroit sécuritaire.","Au milieu de la route.","Devant un feu rouge."],correct:0,why:"endroit sécuritaire 是常用表达，意为安全地点。"}
 ];
 
 const speechState={active:null,timer:null,playId:0,voiceKey:""};
@@ -119,13 +119,13 @@ function refreshVoices(){
  el.innerHTML="";
  if(!voices.length){
   const opt=document.createElement("option");opt.value="";opt.textContent="尚未找到法语声音";el.appendChild(opt);
-  setSpeechStatus("尚无可用法语语音；请安装法语（加拿大）语音包，再重新打开页面。");
+  setSpeechStatus("尚无可用法语语音；请安装设备支持的法语语音包，再重新打开页面。");
   showVoiceInfo();return;
  }
  const score=v=>(v.lang.replace("_","-").toLowerCase()==="fr-ca"?100:0)+(v.lang.toLowerCase().startsWith("fr-ca")?40:0)+(/online.*natural|natural.*online/i.test(v.name)?20:0)+(v.localService?0:5);
  voices.sort((a,b)=>score(b)-score(a)||a.name.localeCompare(b.name));
  for(const v of voices){
-  const op=document.createElement("option");op.value=voiceKey(v);op.textContent=v.name+" ("+v.lang+")"+(v.lang.toLowerCase()==="fr-ca"?" · 加拿大法语":"")+(v.localService?" · 本机":" · 可能在线");el.appendChild(op);
+  const op=document.createElement("option");op.value=voiceKey(v);op.textContent=v.name+" ("+v.lang+")"+(v.lang.toLowerCase()==="fr-ca"?" · fr-CA":"")+(v.localService?" · 本机":" · 可能在线");el.appendChild(op);
  }
  const selected=voices.find(v=>voiceKey(v)===preferred)||voices[0];
  speechState.voiceKey=voiceKey(selected);el.value=speechState.voiceKey;
@@ -133,7 +133,7 @@ function refreshVoices(){
 }
 function showVoiceInfo(){
  const v=getFrenchVoice(),note=$("voiceStatus");if(!note)return;
- note.textContent=v?("当前选用："+v.name+"（"+v.lang+"）。"+(v.lang.toLowerCase()==="fr-ca"?"使用加拿大法语语音，但不保证地道魁北克口音。":"注意：这不是加拿大法语声音；建议安装并选择 fr-CA。")+(v.localService?" 此为本机声音。":" 此声音可能需联网。")):"未检测到法语语音包。请安装法语（加拿大）语音并刷新网站。";
+ note.textContent=v?("当前选用："+v.name+"（"+v.lang+"）。"+(v.lang.toLowerCase()==="fr-ca"?"该语音标记为 fr-CA，具体发音质量取决于设备。":"当前选择的不是 fr-CA 声线；可切换其他法语声音进行比较。")+(v.localService?" 此为本机声音。":" 此声音可能需联网。")):"未检测到法语语音包。请安装法语语音并刷新网站。";
 }
 function stopFrench(){
  speechState.playId+=1;
@@ -151,7 +151,7 @@ function normalizeForSpeech(value){
 function playSequence(lines,rate){
  if(!("speechSynthesis" in window)){setSpeechStatus("这个浏览器不支持语音合成。请使用新版 Chrome、Edge 或 Safari。");return}
  const voice=getFrenchVoice();
- if(!voice){refreshVoices();setSpeechStatus("没有法语声音：请安装 fr-CA 语音包。");return}
+ if(!voice){refreshVoices();setSpeechStatus("没有法语声音：请安装设备支持的法语语音包。");return}
  stopFrench();
  const playId=speechState.playId;
  const items=lines.map(normalizeForSpeech).filter(Boolean);
@@ -185,7 +185,7 @@ function configureSpeech(){
   try{localStorage.setItem(SPEECH_VOICE_KEY,speechState.voiceKey)}catch{}
   showVoiceInfo();const v=getFrenchVoice();setSpeechStatus(v?"已切换至 "+v.name+"（"+v.lang+"）":"没有可用声音。");
  });
- $("testVoice").addEventListener("click",()=>speakFrench("Bonjour ! Je suis votre chauffeur. Est-ce que vous allez à Montréal ?"));
+ $("testVoice").addEventListener("click",()=>speakFrench("Bonjour ! Je suis votre chauffeur. Où allez-vous aujourd’hui ?"));
  $("stopVoice").addEventListener("click",stopFrench);
  $("speedSelect").addEventListener("change",()=>setSpeechStatus("语速已调整。请重新点击发音。"));
  refreshVoices();
