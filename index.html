@@ -60,7 +60,7 @@ const storeKey="qcUberStudy-v1";let state={done:[],responses:{}};try{state={...s
 function save(){try{localStorage.setItem(storeKey,JSON.stringify(state))}catch{}}
 function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]))}
 const $=id=>document.getElementById(id);let day=0;
-function renderDay(){const x=days[day],c=x.c; $("day").value=String(day);$("daytitle").textContent="Day "+(day+1)+" · "+c.title;const base=(x.i*3)%c.words.length;const picked=Array.from({length:5},(_,j)=>c.words[(base+j)%c.words.length]);const qBank=[
+function renderDay(){const x=days[day],c=x.c; $("day").value=String(day);$("daytitle").textContent="第 "+(day+1)+" 天 · "+c.title;const base=(x.i*3)%c.words.length;const picked=Array.from({length:5},(_,j)=>c.words[(base+j)%c.words.length]);const qBank=[
 {question:"Que doit faire un chauffeur avant de commencer son service ?",options:["Vérifier l'état du véhicule.","Ignorer un défaut important.","Conduire sans permis valide."],correct:0,why:"vérifier = 检查；avant de = 在……之前。"},
 {question:"Que signifie « interdit » ?",options:["Obligatoire.","Défendu / non autorisé.","Conseillé."],correct:1,why:"interdit = 禁止；non autorisé = 未获准。"},
 {question:"« Il ne doit pas conduire » signifie :",options:["他必须驾驶。","他可以驾驶。","他不得驾驶。"],correct:2,why:"ne...pas 否定 doit，表示不得。"},
